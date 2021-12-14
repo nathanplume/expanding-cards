@@ -1,0 +1,88 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-family: 400;
+    text-transform: uppercase;
+    margin: 0;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* height needs to be set to align vertically */
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#one {
+    background-image: url(https://images.unsplash.com/photo-1523590564318-491748f70ea7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+#two {
+    background-image: url(https://images.unsplash.com/photo-1492136344046-866c85e0bf04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80);
+}
+
+#three {
+    background-image: url(https://images.unsplash.com/photo-1531572753322-ad063cecc140?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
+}
+
+#four {
+    background-image: url(https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+#five {
+    background-image: url(https://images.unsplash.com/photo-1560930950-5cc20e80e392?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    /* background-size: auto 100%; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 0.5em;
+    position: relative;
+    transition: flex 0.7s ease-in; 
+}
+
+.panel h3 {
+    font-size: 2em;
+    position: absolute;
+    bottom: 1em;
+    left: 0.5em;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.5s ease-in 0.3s;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    }
+}
